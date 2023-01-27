@@ -609,7 +609,7 @@
 			padding-right: 13px;
 
 			.btn {
-				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height, $btn-border-radius-sm);
 
 				&.delete {
 					@include button-variant($color-app-red, $color-white, $color-app-red);

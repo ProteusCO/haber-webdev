@@ -133,7 +133,7 @@
 	}
 
 	.btn {
-		@include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $border-radius-lg);
+		@include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $border-radius-lg);
 		@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-primary-border);
 
 		&.submit_button {
@@ -373,7 +373,7 @@
 		}
 
 		.btn {
-			@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $border-radius-sm);
+			@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height, $border-radius-sm);
 		}
 
 	}

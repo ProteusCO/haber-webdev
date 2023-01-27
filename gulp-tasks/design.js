@@ -3,11 +3,7 @@
  */
 var gulp = require('gulp');
 var del = require('del');
-var runSequence = require('run-sequence');
 
-gulp.task('design', function (callback) {
-    runSequence('design:clean', ['design:build'], callback);
-});
 gulp.task('design:build', function() {
     return gulp.src('./web/src/design/**/*')
         .pipe(gulp.dest('./build/Design'));
@@ -17,3 +13,5 @@ gulp.task('design:clean', function(callback) {
         callback();
     });
 });
+
+gulp.task('design', gulp.series('design:clean', 'design:build'));

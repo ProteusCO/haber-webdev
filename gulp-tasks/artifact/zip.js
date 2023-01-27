@@ -10,11 +10,11 @@ gulp.task('clean:zip', function() {
     return del(['./artifact/*']);
 });
 
-gulp.task('zip', ['build', 'clean:zip'], function() {
+gulp.task('zip', gulp.series('build', 'clean:zip', function() {
     var version = `${projectInfo.name}-${projectInfo.version}`;
     if(projectInfo.versionStatus == "SNAPSHOT")
         version += "-SNAPSHOT";
     return gulp.src('./build/**/*')
         .pipe(gzip(`${version}.zip`))
         .pipe(gulp.dest('./artifact'));
-});
+}));

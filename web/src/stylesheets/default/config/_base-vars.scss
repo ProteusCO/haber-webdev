@@ -9,12 +9,12 @@ $color-app-grey: #515B6B;
 $color-app-light-grey: #9699A6;
 
 //Haberfeld specific styles
-$color-hab-orange: #e5901a; //Brand
+$color-hab-orange: #f37520; //Brand
 $color-hab-lightest-gray: #c7c7c7; //select2 borders
 $color-hab-light-gray: #a1a1a1; //secondary buttons
-$color-hab-dark-gray: #6D6D6D; //secondary button border
-$color-hab-darkest-gray: #3b3e40; //default font color
-$color-hab-dark-blue: #062B47;
+$color-hab-dark-gray: #686a6c; //secondary button border
+$color-hab-darkest-gray: #2a2a2a; //default font color
+$color-hab-green: #9ccb3b;
 $color-hab-almost-white: #F3F4F5;
 $color-hab-yellow: #FDC34D;
 
@@ -34,10 +34,9 @@ $btn-line-height:                0.75;
 $btn-secondary-color:            #fff;
 $btn-secondary-bg:               $color-hab-light-gray;
 $btn-secondary-border:           $color-hab-dark-gray;
-$enable-shadows:                 false;
 
-@import "../../../../../bower_components/bootstrap/scss/variables";
-
+$btn-box-shadow:                 none;
+$btn-focus-width:                2px;
 
 $menu-item-active: $color-app-red;
 $menu-item-inactive: $color-app-light-grey;
@@ -60,12 +59,17 @@ $color-charcoal: #333;
 
 $color-cornsilk: cornsilk;
 
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-libre-gothic: 'Libre Franklin', sans-serif;
 $font-monospace: monospace;
 $font-arial: $font-family-sans-serif;
 $font-open-sans: $font-libre-gothic;
 //$font-open-sans: 'Open Sans', $font-arial;
+$font-open-sans-bold: 'Open Sans';
+$font-glyph-lib: "Font Awesome 5 Pro";
 $font-roboto: "Roboto", $font-family-sans-serif;
+
+$font-family-serif: Times, 'Times New Roman', serif;
 
 $font-default-color: $color-hab-darkest-gray;
 $font-default-size: 14px;
@@ -79,10 +83,6 @@ $bp-tablets-only: (min-width: 768px) (min-width: 1024px);
 $bp-tablets-landscape: (min-width: 1024px);
 $bp-desktop: (min-width: 1280px);
 $bp-desktop-wide: (min-width: 1400px);
-
-$font-open-sans-bold: 'Open Sans';
-
-$font-glyph-lib: "Font Awesome 5 Pro";
 
 $html-entity-error: '\f071';
 $html-entity-info: '\f129';
@@ -100,3 +100,32 @@ $color-warning-dark: #8a6d3b;
 
 $color-error-light: #ebcccc;
 $color-error-dark: #a94442;
+
+// Set up Theme colors & other settings for bootstrap before importing their variables
+$primary:    $color-hab-orange;
+$secondary: $color-hab-green;
+$success:    $brand-primary;
+$info:       $brand-info;
+$warning:    $brand-warning;
+$danger:     $brand-danger;
+$light:      $color-hab-almost-white;
+$dark:       $color-hab-darkest-gray;
+
+$enable-gradients:    false;
+$enable-shadows:      false;
+$enable-transitions:  false;
+
+$border-radius:               .25rem;
+$border-radius-lg:            .3rem;
+$border-radius-sm:            .2rem;
+
+$btn-border-radius:           $border-radius;
+$btn-border-radius-lg:        $border-radius-lg;
+$btn-border-radius-sm:        $border-radius-sm;
+
+//Bootstrap variables that have been removed in current Bootstrap but are still referenced in our styles
+$font-size-xs:                        .75rem !default;
+$btn-padding-x-sm:                    .5rem !default;
+$btn-padding-y-sm:                    .25rem !default;
+$spacer:                              1rem !default;
+$spacer-y:                            $spacer !default;

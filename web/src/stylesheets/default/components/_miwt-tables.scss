@@ -67,7 +67,7 @@
 
 				a, button {
 					@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-					@include button-size($btn-padding-y-sm, $btn-padding-x-sm, 13px, $btn-border-radius-sm);
+					@include button-size($btn-padding-y-sm, $btn-padding-x-sm, 13px, $btn-line-height, $btn-border-radius-sm);
 					font-size: 13px;
 					margin: 0 5px 5px 0;
 					text-transform: uppercase;

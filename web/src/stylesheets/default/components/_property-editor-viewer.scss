@@ -1,8 +1,6 @@
-@import "../config/base-vars";
+@import "../config/base-import";
+
 @import "../mixins/miwt-switch";
-@import "../../../../../bower_components/bootstrap/scss/mixins";
-@import "../../../../../bower_components/bootstrap/scss/mixins/clearfix";
-@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
 
 .custom-activities,
 .survey-activities {

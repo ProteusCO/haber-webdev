@@ -19,16 +19,8 @@ if(projectInfo.versionStatus == "SNAPSHOT")
 var PUBLISH_METADATA_URL = `${SERVER_URL}/vt-snapshot-local/${parsedGroup}/${projectInfo.name}`;
 var PUBLISH_URL = `${SERVER_URL}/vt-snapshot-local/${parsedGroup}/${projectInfo.name}/${VERSION}`;
 
-gulp.task('publish', ['zip', 'publish:maven-metadata'], function() {
-    return gulp.src(`./artifact/${projectInfo.name}-${VERSION}.zip`)
-        .pipe(gafu({
-            url: PUBLISH_URL,
-            username: PUBLISH_USERNAME,
-            password: PUBLISH_PASSWORD
-        }));
-});
 
-gulp.task('publish:maven-metadata', ['zip'], function() {
+gulp.task('publish:maven-metadata', gulp.series('zip', function() {
     return templateAsFile('maven-metadata.xml',
         `<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
@@ -47,7 +39,16 @@ gulp.task('publish:maven-metadata', ['zip'], function() {
         username: PUBLISH_USERNAME,
         password: PUBLISH_PASSWORD
     }))
-});
+}));
+
+gulp.task('publish', gulp.series('zip', 'publish:maven-metadata', function() {
+    return gulp.src(`./artifact/${projectInfo.name}-${VERSION}.zip`)
+        .pipe(gafu({
+            url: PUBLISH_URL,
+            username: PUBLISH_USERNAME,
+            password: PUBLISH_PASSWORD
+        }));
+}));
 
 function templateAsFile(filename, template) {
     var src = stream.Readable({ objectMode: true });

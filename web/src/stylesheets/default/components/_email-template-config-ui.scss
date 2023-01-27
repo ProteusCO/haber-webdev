@@ -1,5 +1,4 @@
-@import "../config/base-vars";
-@import "../../../../../../bower_components/bootstrap/scss/mixins";
+@import "../config/base-import";
 
 .email-preview {
 	.preview-actions {
@@ -13,7 +12,7 @@
 	display: inline-block;
 }
 .recipient > .btn.remove{
-	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-border-radius);
+	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height, $btn-border-radius);
 	margin-left: 2ch;
 	background: $color-white;
 	color: $color-app-red;

@@ -1,6 +1,4 @@
-@import "../config/base-vars";
-@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
-@import "../../../../../bower_components/bootstrap/scss/buttons";
+@import "../config/base-import";
 
 .actions .btn {
 	margin-right:4px;
@@ -42,7 +40,7 @@
 }
 
 .action-column .btn {
-	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-border-radius-sm);
+	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height, $btn-border-radius-sm);
 }
 
 span.submit_button .btn.submit_button {

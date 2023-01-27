@@ -8,12 +8,20 @@ var sourcemaps = require("gulp-sourcemaps");
 var uglify = require('gulp-uglify');
 var del = require('del');
 var include = require("gulp-include");
-var runSequence = require('run-sequence');
 var flatten = require('gulp-flatten');
 
-gulp.task('javascript', function(callback){
-    runSequence('javascript:clean', ['javascript:build', 'javascript:vendor'], callback);
+gulp.task('sourcemaps:clean', function(callback) {
+    del(['./build/Sourcemaps']).then(function(data) {
+        callback();
+    });
 });
+
+gulp.task('javascript:clean', gulp.series('sourcemaps:clean', function(callback) {
+    del(['./build/Javascript']).then(function(data) {
+        callback();
+    });
+}));
+
 gulp.task('javascript:build', function() {
     return gulp.src(['./web/src/javascript/**/*.js', '!./web/src/javascript/**/components/*.js'])
         .pipe(clip())
@@ -64,13 +72,9 @@ gulp.task('javascript:vendor', function() {
         .pipe(gulp.dest('./build/Javascript/vendor'))
         ;
 });
-gulp.task('javascript:clean', ['sourcemaps:clean'], function(callback) {
-    del(['./build/Javascript']).then(function(data) {
-        callback();
-    });
-});
-gulp.task('sourcemaps:clean', function(callback) {
-    del(['./build/Sourcemaps']).then(function(data) {
-        callback();
-    });
-});
+
+
+// gulp.task('javascript', gulp.series('javascript:clean', 'javascript:build', 'javascript:vendor'));
+
+// Temporarily removing the vendor build because I don't want to deal with the updates right now
+gulp.task('javascript', gulp.series('javascript:clean', 'javascript:build'));

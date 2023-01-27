@@ -2,29 +2,26 @@
  * Created by aholt on 1/10/17.
  */
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-dart-sass');
 var rename = require('gulp-rename');
 var minifyCss = require('gulp-clean-css');
-var autoprefixer = require('gulp-autoprefixer');
 var clip = require('gulp-clip-empty-files');
 var del = require('del');
-var runSequence = require('run-sequence');
 var flatten = require('gulp-flatten');
 var sourcemaps = require("gulp-sourcemaps");
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
-gulp.task('styles', function (callback) {
-    runSequence('styles:clean', ['styles:build', 'styles:vendor'], callback);
-});
 gulp.task('styles:build', function() {
     return gulp.src('./web/src/stylesheets/**/*.scss')
         .pipe(clip())
         .pipe(sass({
-            outputStyle: 'expanded'
+            outputStyle: 'expanded',
+            includePaths: ['./web/src', './web/src/stylesheets', '.']
         }))
-        .pipe(autoprefixer({
-            browsers: ['> 1%', 'last 2 versions', 'ie > 9'],
-            cascade: false
-        }))
+        .pipe(postcss([
+            autoprefixer()
+        ]))
         .pipe(gulp.dest('./build/Stylesheets'))
         .pipe(sourcemaps.init({ debug: true }))
         .pipe(minifyCss())
@@ -66,8 +63,10 @@ gulp.task('styles:vendor', function() {
         .pipe(gulp.dest('./build/Stylesheets/vendor'))
         ;
 });
-gulp.task('styles:clean', ['sourcemaps:clean'], function(callback) {
+gulp.task('styles:clean', gulp.series('sourcemaps:clean', function(callback) {
     del(['./build/Stylesheets']).then(function(data) {
         callback();
     });
-});
+}));
+
+gulp.task('styles', gulp.series('styles:clean', 'styles:build'));

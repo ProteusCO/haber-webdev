@@ -1,5 +1,4 @@
-@import "../config/base-vars";
-@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../config/base-import";
 
 .inlinewindow {
 	position: relative;
@@ -339,7 +338,7 @@
 .activity-management .activity-instance-editor-upper a.designate-activity:before {
 	content: '\f0e8';
 	font-family: $font-glyph-lib;
-	color: $color-hab-dark-blue;
+	color: $color-hab-green;
 	line-height: 24px;
 }
 
@@ -638,7 +637,7 @@
 
 .activity-instance-editor .persistence-actions.send-email .btn.trigger {
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-	@include button-size($btn-padding-y, $btn-padding-x, $font-default-size, $btn-border-radius);
+	@include button-size($btn-padding-y, $btn-padding-x, $font-default-size, $btn-line-height, $btn-border-radius);
 	text-decoration: none;
 	font-family: $font-libre-gothic;
 	text-transform: uppercase;
