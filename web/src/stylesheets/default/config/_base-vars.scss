@@ -1,48 +1,3 @@
-$color-app-brand: #67B362;
-$color-app-yellow: #F9BB29;
-$color-app-blue: #488fb4;
-$color-app-light-blue: #4AB0D5;
-$color-app-cyan: #6CCAC9;
-$color-app-red: #EE695B;
-$color-app-black: #343940;
-$color-app-grey: #515B6B;
-$color-app-light-grey: #9699A6;
-
-//Haberfeld specific styles
-$color-hab-orange: #f37520; //Brand
-$color-hab-lightest-gray: #c7c7c7; //select2 borders
-$color-hab-light-gray: #a1a1a1; //secondary buttons
-$color-hab-dark-gray: #686a6c; //secondary button border
-$color-hab-darkest-gray: #2a2a2a; //default font color
-$color-hab-green: #9ccb3b;
-$color-hab-almost-white: #F3F4F5;
-$color-hab-yellow: #FDC34D;
-
-$app-page-bg: #e3e3e3;
-
-$body-bg: $app-page-bg;
-$brand-primary: $color-app-brand;
-$brand-danger: $color-app-red;
-$brand-warning: $color-app-yellow;
-$brand-info: $color-app-cyan;
-
-$btn-primary-color:              #fff;
-$btn-primary-bg:                 $color-hab-orange;
-$btn-primary-border:             darken($color-hab-orange, 5%);
-$btn-line-height:                0.75;
-
-$btn-secondary-color:            #fff;
-$btn-secondary-bg:               $color-hab-light-gray;
-$btn-secondary-border:           $color-hab-dark-gray;
-
-$btn-box-shadow:                 none;
-$btn-focus-width:                2px;
-
-$menu-item-active: $color-app-red;
-$menu-item-inactive: $color-app-light-grey;
-
-$header-bg: #A8ABBA;
-
 $color-white: #fff;
 $color-black: #000;
 
@@ -58,6 +13,52 @@ $color-light-charcoal: #555;
 $color-charcoal: #333;
 
 $color-cornsilk: cornsilk;
+
+$color-app-brand: #67B362;
+$color-app-yellow: #fdb813;
+$color-app-blue: #488fb4;
+$color-app-light-blue: #4AB0D5;
+$color-app-cyan: #6CCAC9;
+$color-app-red: #EE695B;
+$color-app-black: #343940;
+$color-app-grey: #515B6B;
+$color-app-light-grey: #9699A6;
+
+//Haberfeld specific styles
+$color-hab-orange: #f37520; //Brand
+$color-hab-lightest-gray: #c7c7c7; //select2 borders
+$color-hab-light-gray: #a1a1a1; //secondary buttons
+$color-hab-dark-gray: #686a6c; //secondary button border
+$color-hab-darkest-gray: #2a2a2a; //default font color
+$color-hab-green: #9ccb3b;
+$color-hab-light-green: #cbe498;
+$color-hab-almost-white: #F3F4F5;
+$color-hab-yellow: #fdb813;
+
+$app-page-bg: #e3e3e3;
+
+$body-bg: $app-page-bg;
+$brand-primary: $color-app-brand;
+$brand-danger: $color-app-red;
+$brand-warning: $color-app-yellow;
+$brand-info: $color-app-cyan;
+
+$btn-primary-color:              $color-white;
+$btn-primary-bg:                 $color-hab-orange;
+$btn-primary-border:             darken($color-hab-orange, 5%);
+$btn-line-height:                0.75;
+
+$btn-secondary-color:            $color-white;
+$btn-secondary-bg:               $color-hab-light-gray;
+$btn-secondary-border:           $color-hab-dark-gray;
+
+$btn-box-shadow:                 none;
+$btn-focus-width:                2px;
+
+$menu-item-active: $color-app-red;
+$menu-item-inactive: $color-app-light-grey;
+
+$header-bg: #A8ABBA;
 
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-libre-gothic: 'Libre Franklin', sans-serif;
@@ -102,18 +103,35 @@ $color-error-light: #ebcccc;
 $color-error-dark: #a94442;
 
 // Set up Theme colors & other settings for bootstrap before importing their variables
-$primary:    $color-hab-orange;
-$secondary: $color-hab-green;
-$success:    $brand-primary;
-$info:       $brand-info;
-$warning:    $brand-warning;
-$danger:     $brand-danger;
-$light:      $color-hab-almost-white;
-$dark:       $color-hab-darkest-gray;
+$hab-primary:     $color-hab-orange;
+$hab-secondary:   $color-hab-green;
+$hab-success:     $brand-primary;
+$hab-info:        $brand-info;
+$hab-warning:     $brand-warning;
+$hab-danger:      $brand-danger;
+$hab-light:       $color-hab-almost-white;
+$hab-dark:        $color-hab-darkest-gray;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+    (
+        "primary":    $hab-primary,
+        "secondary":  $hab-secondary,
+        "success":    $hab-success,
+        "info":       $hab-info,
+        "warning":    $hab-warning,
+        "danger":     $hab-danger,
+        "light":      $hab-light,
+        "dark":       $hab-dark
+    ),
+    $theme-colors
+);
 
 $enable-gradients:    false;
 $enable-shadows:      false;
 $enable-transitions:  false;
+
+$body-color:          $hab-primary;
 
 $border-radius:               .25rem;
 $border-radius-lg:            .3rem;

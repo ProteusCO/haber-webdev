@@ -13,23 +13,23 @@
 	border-collapse: separate;
 	border-radius: 4px;
 	border-spacing: 0px;
-	border: 1px solid #C2C2C2;
-	border-top: 1px solid #25282A;
+	border: 1px solid $color-hab-green;
+	border-top: 1px solid $color-hab-green;
 	border-bottom: none;
 	max-width: 100%;
 
 	> thead > tr {
 		> th {
 			//@include style-table-heading;
-			background: #25282a;
-			background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+			background: $color-hab-green;
+			background: linear-gradient(to bottom,  $color-hab-green 0%, $color-hab-light-green 100%);
 			font-size: 14px;
-			color: $color-white;
+			color: $color-hab-darkest-gray;
 			font-weight: 400;
 			padding: 10px 15px;
 			text-align: left;
 			font-family: $font-libre-gothic;
-			border-bottom: 1px solid #C2C2C2;
+			border-bottom: 1px solid $color-hab-green;
 			line-height: 24px;
 
 			@include media-breakpoint-up(xl) {
@@ -37,11 +37,12 @@
 			}
 
 			+ th {
-				border-left: 1px solid #C2C2C2;
+				border-left: 1px solid $color-hab-green;
 			}
 
 			a {
-				color: $color-hab-orange;
+				color: $color-hab-darkest-gray;
+				text-decoration: underline;
 			}
 		}
 	}
@@ -66,8 +67,9 @@
 			&.action-column, &.last-column {
 
 				a, button {
-					@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+					@include button-variant($btn-primary-bg, $btn-primary-bg, $btn-primary-border);
 					@include button-size($btn-padding-y-sm, $btn-padding-x-sm, 13px, $btn-line-height, $btn-border-radius-sm);
+					color: $color-white;
 					font-size: 13px;
 					margin: 0 5px 5px 0;
 					text-transform: uppercase;
