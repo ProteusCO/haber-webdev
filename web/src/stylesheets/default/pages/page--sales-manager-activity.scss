@@ -1,7 +1,5 @@
-@import "../config/base-vars";
-@import "../../../../../bower_components/bootstrap/scss/mixins";
-@import "../../../../../bower_components/bootstrap/scss/mixins/clearfix";
-@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+@import "../config/base-import";
+
 @import "../components/sales-activity-calculator";
 @import "../components/attendees";
 @import "../components/customized-activity";

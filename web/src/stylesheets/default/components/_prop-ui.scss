@@ -1,6 +1,6 @@
-@import "../config/base-vars";
+@import "../config/base-import";
 @import "../mixins/miwt-switch";
-@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+
 
 /* ==========================================================================
    Basic Styles for Property Editor/Viewer
@@ -86,7 +86,7 @@ input[type=number]{
 	.prop {
 		> .actions, .selected-link {
 			.btn {
-				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-border-radius-sm);
+				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height, $btn-border-radius-sm);
 			}
 		}
 	}
@@ -135,7 +135,7 @@ input[type=number]{
 		}
 
 		.actions {
-			@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+			@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height, $btn-border-radius-sm);
 		}
 
 		span.rtb + span.rtb {

@@ -2,9 +2,9 @@
 
 /* Header styles */
 #header {
-	background: rgb(6,43,72); /* Fallback for older browsers that don't support linear gradient */
-	background: linear-gradient(to bottom,  rgba(6,43,72,1) 0%,rgba(6,43,72,1) 36%,rgba(5,35,59,1) 100%); /* W3C */
-	border-bottom: 1px solid #0d3b61;
+	background: $color-hab-darkest-gray; /* Fallback for older browsers that don't support linear gradient */
+	background: linear-gradient(to bottom,  rgba($color-hab-darkest-gray, .8) 0%,rgba($color-hab-darkest-gray, .95) 36%,rgba($color-hab-darkest-gray,1) 100%); /* W3C */
+	border-bottom: 1px solid $color-hab-darkest-gray;
 
 	> .box-wc {
 		display: flex;
@@ -203,10 +203,10 @@
 		left: 0;
 		z-index: 50;
 		width: 250px;
-		background: #062B47;
+		background: $color-hab-darkest-gray;
 		padding: 5px;
 		border-radius: 3px;
-		box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+		box-shadow: 0 4px 5px rgba($color-hab-darkest-gray, .15);
 		max-height: 210px;
 		overflow-y: auto;
 		opacity: 0;
@@ -214,7 +214,7 @@
 		transition: all 0.15s ease-out;
 
 		> .mi {
-			background-color: #0B385B;
+			background-color: $color-hab-dark-gray;
 			border-radius: 1px;
 			transition: all 0.15s;
 

@@ -1,6 +1,4 @@
-@import "../config/base-vars";
-@import "../../../../../bower_components/bootstrap/scss/mixins";
-@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+@import "../config/base-import";
 
 /**
 * Provide button look for MIWT MenuComponent
@@ -14,7 +12,7 @@
 	cursor: pointer;
 	user-select: none;
 	border: $input-btn-border-width solid transparent;
-	@include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+	@include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
 	@include transition(all .2s ease-in-out);
 
 	&,
@@ -43,7 +41,7 @@
 
 	&.disabled,
 	&:disabled {
-		cursor: $cursor-disabled;
+		cursor: not-allowed;
 		opacity: .65;
 		@include box-shadow(none);
 	}

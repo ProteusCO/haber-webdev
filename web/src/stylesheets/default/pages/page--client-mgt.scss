@@ -1,5 +1,4 @@
-@import "../config/base-vars";
-@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../config/base-import";
 
 /* save to complete the stream storage copy */
 button.btn,
@@ -1101,7 +1100,7 @@ button.btn {
 			margin: 0 0 0 15px;
 
 			.btn {
-				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height, $btn-border-radius-sm);
 			}
 		}
 	}

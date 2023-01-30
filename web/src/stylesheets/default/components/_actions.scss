@@ -1,28 +1,20 @@
-@import "../config/base-vars";
-@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
-@import "../../../../../bower_components/bootstrap/scss/buttons";
+@import "../config/base-import";
 
 .actions .btn {
-	margin-right:4px;
-}
-.actions .btn, .procedure-navigation .btn, .recipients .btn {
-	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-	font-family: $font-libre-gothic;
-	font-weight: 600;
-	padding: .4rem 1rem;
-
-	&.reset {
-		@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+	+ .btn {
+		margin-left: 4px;
 	}
+}
+.actions, .procedure-navigation, .recipients {
+	.btn {
 
-	&.remove, &.cancel, &.cancel-button, &.reschedule {
-		background: $color-white;
-		color: $color-app-red;
-		border-color: $color-app-red;
+		&.reset {
+			@include button-variant($btn-secondary-bg, $btn-secondary-bg);
+			color: $color-white;
+		}
 
-		&:hover {
-			background: $color-app-red;
-			border-color: $color-app-red;
+		&.remove, &.cancel, &.cancel-button, &.reschedule {
+			@include button-variant($color-app-red, $color-app-red);
 			color: $color-white;
 		}
 	}
@@ -30,25 +22,27 @@
 
 .btn {
 	cursor: pointer;
+	@include button-variant($btn-primary-bg, $btn-primary-bg);
+	color: $color-white;
+	font-family: $font-libre-gothic;
+	font-weight: 600;
+	padding: .4rem 1rem;
+
 
 	&.engagement-completed {
-		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 		display: block;
 	}
 
 	&.go, &.back-home {
-		@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+		@include button-variant($btn-secondary-bg, $btn-secondary-bg);
+		color: $color-white;
 	}
 }
 
 .action-column .btn {
-	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-border-radius-sm);
+	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height, $btn-border-radius-sm);
 }
 
 span.submit_button .btn.submit_button {
-	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-	font-family: $font-libre-gothic;
-	font-weight: 600;
-	padding: .4rem 1rem;
 	margin: .5rem 0;
 }

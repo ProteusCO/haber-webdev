@@ -26,9 +26,6 @@
 	left: 272px;
 	right: 351px;
 	opacity: 0;
-	-moz-transition: opacity 0.25s ease-in;
-	-webkit-transition: opacity 0.25s ease-in;
-	-o-transition: opacity 0.25s ease-in;
 	transition: opacity 0.25s ease-in;
 }
 
@@ -78,55 +75,103 @@
 	border-color: transparent;
 }
 
-.featured-resources .resources .resource.category-video-audio-podcast,
-.featured-resources .resources .resource.category-ecsell-webinars-jams,
-.featured-resources .resources .resource.category-summit-resource,
-.featured-resources .resources .resource.category-article,
-.featured-resources .resources .resource.category-best-practice-document,
-.featured-resources .resources .resource.category-case-study,
-.featured-resources .resources .resource.category-white-paper {
-	border-color: #fff;
-}
+.featured-resources {
+	.resources {
+		.resource {
+			&.category-video-audio-podcast,
+			&.category-ecsell-webinars-jams,
+			&.category-summit-resource,
+			&.category-article,
+			&.category-best-practice-document,
+			&.category-case-study,
+			&.category-white-paper {
+				border-color: $color-white;
+			}
 
-.featured-resources .resources .resource.category-video-audio-podcast {
-	background-image: url(/_resources/dyn/files/15903ze6873255/_fn/resource-default-media2.jpg);
-}
+			&.category-video-audio-podcast {
+				background-image: url(/_resources/dyn/files/15903ze6873255/_fn/resource-default-media2.jpg);
+			}
 
-.featured-resources .resources .resource.category-ecsell-webinars-jams {
-	background-image: url(/_resources/dyn/files/15905zfe49760/_fn/resource-default-webinar.jpg);
-}
+			&.category-ecsell-webinars-jams {
+				background-image: url(/_resources/dyn/files/15905zfe49760/_fn/resource-default-webinar.jpg);
+			}
 
-.featured-resources .resources .resource.category-summit-resource {
-	background-image: url(/_resources/dyn/files/15904z78e3a7f6/_fn/resource-default-summit.jpg);
-}
+			&.category-summit-resource {
+				background-image: url(/_resources/dyn/files/15904z78e3a7f6/_fn/resource-default-summit.jpg);
+			}
 
-.featured-resources .resources .resource.category-article {
-	background-image: url(/_resources/dyn/files/15899zd6520a35/_fn/resource-default-article.jpg);
-}
+			&.category-article {
+				background-image: url(/_resources/dyn/files/15899zd6520a35/_fn/resource-default-article.jpg);
+			}
 
-.featured-resources .resources .resource.category-best-practice-document {
-	background-image: url(/_resources/dyn/files/15900z7f8e63ef/_fn/resource-default-best-practice.jpg);
-}
+			&.category-best-practice-document {
+				background-image: url(/_resources/dyn/files/15900z7f8e63ef/_fn/resource-default-best-practice.jpg);
+			}
 
-.featured-resources .resources .resource.category-case-study {
-	background-image: url(/_resources/dyn/files/15901z8895379/_fn/resource-default-case-study.jpg);
-}
+			&.category-case-study {
+				background-image: url(/_resources/dyn/files/15901z8895379/_fn/resource-default-case-study.jpg);
+			}
 
-.featured-resources .resources .resource.category-white-paper {
-	background-image: url(/_resources/dyn/files/15906z96edc6da/_fn/resource-default-white-paper.jpg);
-}
+			&.category-white-paper {
+				background-image: url(/_resources/dyn/files/15906z96edc6da/_fn/resource-default-white-paper.jpg);
+			}
 
-.featured-resources .resources .resource > a {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 5;
-}
+			> a {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 5;
+			}
+		}
 
-.featured-resources .resources > .resource {
-	display: none;
+		> .resource {
+			display: none;
+		}
+
+		.mCSB_scrollTools {
+			width: 100%;
+			bottom: 55px;
+			height: 37px;
+			overflow: visible;
+
+			.mCSB_draggerContainer {
+				display: none;
+			}
+
+			.mCSB_buttonLeft,
+			.mCSB_buttonRight {
+				width: 38px;
+				height: 37px;
+				position: absolute;
+				opacity: 0.5;
+				cursor: pointer;
+				background-image: url("/_resources/dyn/files/11040z9b510a33/_fn/featured-buttons.png");
+				background-position: 0 0;
+				background-repeat: no-repeat;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			.mCSB_buttonLeft {
+				background-position: 0 0;
+				left: -48px;
+			}
+
+			.mCSB_buttonRight {
+				background-position: -38px 0px;
+				right: -48px;
+			}
+		}
+
+		.mCustomScrollBox.featured-pos {
+			position: static !important;
+		}
+
+	}
 }
 
 .featured-resources-content {
@@ -134,52 +179,11 @@
 	position: relative;
 }
 
-.featured-resources .resources .mCSB_scrollTools .mCSB_draggerContainer {
-	display: none;
-}
-
-.featured-resources .resources .mCSB_scrollTools {
-	width: 100%;
-	bottom: 55px;
-	height: 37px;
-	overflow: visible;
-}
-
-.featured-resources .resources .mCustomScrollBox.featured-pos {
-	position: static !important;
-}
-
-.featured-resources .mCSB_scrollTools .mCSB_buttonLeft,
-.featured-resources .mCSB_scrollTools .mCSB_buttonRight {
-	width: 38px;
-	height: 37px;
-	position: absolute;
-	opacity: 0.5;
-	cursor: pointer;
-	background-image: url("/_resources/dyn/files/11040z9b510a33/_fn/featured-buttons.png");
-	background-position: 0 0;
-	background-repeat: no-repeat;
-}
-
 .lt-ie9 .featured-resources .mCSB_scrollTools .mCSB_buttonLeft,
 .lt-ie9 .featured-resources .mCSB_scrollTools .mCSB_buttonRight {
 	filter: none; /* fix for ie8 rendering bug */
 }
 
-.featured-resources .mCSB_scrollTools .mCSB_buttonLeft {
-	background-position: 0 0;
-	left: -48px;
-}
-
-.featured-resources .mCSB_scrollTools .mCSB_buttonRight {
-	background-position: -38px 0px;
-	right: -48px;
-}
-
-.featured-resources .mCSB_scrollTools .mCSB_buttonLeft:hover,
-.featured-resources .mCSB_scrollTools .mCSB_buttonRight:hover {
-	opacity: 1;
-}
 
 /* specific period selector styles */
 .period-selector {
@@ -187,10 +191,10 @@
 	top: 299px;
 	left: 0;
 	z-index: 10;
-}
 
-.period-selector select {
-	width: 246px;
+	select {
+		width: 246px;
+	}
 }
 
 /* QUICK VIEW */
@@ -213,9 +217,9 @@
 		width: calc(50% - 1rem);
 		display: inline-block;
 		vertical-align: top;
-		background: #062B47;
+		background: $color-hab-green;
 		border-radius: 3px;
-		border: 3px solid #062B47;
+		border: $color-hab-green 3px solid;
 
 		.stats-con {
 			max-height: 183px;
@@ -230,8 +234,7 @@
 				}
 
 				&:hover {
-					background: $color-hab-orange;
-					color: $color-white;
+					background: $color-hab-light-green;
 				}
 
 				.label {
@@ -409,9 +412,8 @@
 .table-part tr.over td,
 .table-part tr.over td.vacant,
 .table-part tr.over td.previous-employee {
-	background-color: $color-hab-orange;
-	color: #fff;
-	border-color: $color-hab-orange;
+	background-color: $color-hab-light-green;
+	border-color: $color-hab-light-green;
 }
 
 .table-part th.label,
@@ -702,48 +704,45 @@ tr.joint-sales-calls .select2-container {
 	opacity: 1;
 	max-height: 400px;
 	overflow-y: auto;
-	-ms-transition: all 0.25s;
-	-moz-transition: all 0.25s;
-	-webkit-transition: all 0.25s;
 	transition: all 0.25s;
-}
 
-.notification-bar-con.hidden{
-	opacity: 0;
-	visibility: hidden;
-	max-height: 0;
-}
+	&.hidden{
+		opacity: 0;
+		visibility: hidden;
+		max-height: 0;
+	}
 
-.notification-bar .notification {
-	background-color: #d0d0d0;
-	padding: 5px 15px;
-	font-family: $font-libre-gothic;
-	font-weight: 700;
-	font-size: 13px;
-	color: #fff;
-}
+	.notification {
+		background-color: #d0d0d0;
+		padding: 5px 15px;
+		font-family: $font-libre-gothic;
+		font-weight: 700;
+		font-size: 13px;
+		color: $color-hab-darkest-gray;
 
-.notification-bar .notification:after {
-	content: " ";
-	display: table;
-	clear: both;
-}
+		&:after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
 
-.notification-bar .notification.quote {
-	background-color: $color-hab-orange;
-}
+		&.quote {
+			background-color: $color-hab-orange;
+		}
 
-.notification-bar .notification.birthday,
-.notification-bar .notification.anniversary {
-	background-color: #4cbeee;
-}
+		&.birthday,
+		&.anniversary {
+			background-color: $color-hab-green;
+		}
 
-.notification-bar .notification.hidden {
-	display: none;
-}
+		&.hidden {
+			display: none;
+		}
 
-.notification-bar .notification + .notification {
-	border-top: 1px solid #ccc;
+		+ .notification {
+			border-top: 1px solid #ccc;
+		}
+	}
 }
 
 /*
@@ -823,7 +822,7 @@ border-top-color: #1f88d8;
 }
 
 .notification-summary.visible-notifications .notification-count {
-	color: #fff;
+	color: $color-white;
 	background-color: $color-hab-orange;
 }
 

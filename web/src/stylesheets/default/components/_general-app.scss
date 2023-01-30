@@ -8,65 +8,63 @@
 	cursor: pointer;
 	z-index: 2;
 	position: relative;
-}
 
-.user-control:before,
-.user-control:after {
-	content: " ";
-	display: table;
-}
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
 
-.user-control:after {
-	clear: both;
-}
+	&:after {
+		clear: both;
+	}
 
-.user-control {
 	.collapsible-control {
 		display: inline-block;
 		min-width: 170px;
 		padding: 10px;
 
 		&:hover {
-			background-color: #0b385b;
+			background-color: $color-hab-darkest-gray;
 		}
 	}
-}
 
-.user-control .collapsible-shown {
-	position: absolute;
-	top: 100%;
-	right: 0;
+	.collapsible-shown {
+		position: absolute;
+		top: 100%;
+		right: 0;
+	}
 }
 
 .user-control-trigger {
 	white-space: nowrap;
 	&:hover {
-		background-color: #0b385b;
+		background-color: $color-hab-darkest-gray;
 	}
-}
 
-.user-control-trigger .photo {
-	border: 1px solid #fff;
-	width: 40px;
-	height: 40px;
-	float: right;
-	background: center top #f3f3f3 url(/_resources/dyn/files/9035za2fed25b/_fn/default-user-photo.png) no-repeat;
-	background-size: cover;
-}
+	.photo {
+		border: 1px solid #fff;
+		width: 40px;
+		height: 40px;
+		float: right;
+		background: center top #f3f3f3 url(/_resources/dyn/files/9035za2fed25b/_fn/default-user-photo.png) no-repeat;
+		background-size: cover;
+	}
+	.info {
+		margin-right: 50px;
+		padding-top: 3px;
+	}
 
-.user-control-trigger .info {
-	margin-right: 50px;
-	padding-top: 3px;
-}
+	.intro {
+		font-size: 13px;
+		line-height: 1.25;
+	}
 
-.user-control-trigger .intro {
-	font-size: 13px;
-	line-height: 1.25;
-}
+	.name {
+		color: $color-hab-orange;
+		line-height: 1.25;
+	}
 
-.user-control-trigger .name {
-	color: $color-hab-orange;
-	line-height: 1.25;
 }
 
 /* control panel, generally used in the user control */
@@ -400,70 +398,68 @@
 
 /* quick table view */
 .quick-view {
-	background: #062B47;
+	background: $color-hab-darkest-gray;
 	border-radius: 3px;
-	border: 3px solid #062B47;
-}
+	border: 3px solid $color-hab-darkest-gray;
+	> h2.heading {
+		color: $color-white;
+		font-size: 18px;
+		font-family: $font-libre-gothic;
+		font-weight: 700;
+		margin: 0;
+		padding: 10px 10px;
+	}
 
-.quick-view .heading {
-	font-size: 18px;
-	font-family: $font-libre-gothic;
-	font-weight: 700;
-	color: #FFFFFF;
-	margin: 0;
-	padding: 10px 10px;
-}
+	.stats-con{
+		width: 100%;
+		height: 100%;
+		max-height: 146px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
 
-.quick-view .stats-con{
-	width: 100%;
-	height: 100%;
-	max-height: 146px;
-	overflow-y: auto;
-	overflow-x: hidden;
-}
+	.stats {
+		width: 100%;
+		display: table;
+		font-size: 14px;
+		font-family: $font-libre-gothic;
+		font-weight: 600;
+		color: $color-white;
+		.stat {
+			display: table-row;
 
-.quick-view .stats {
-	width: 100%;
-	display: table;
-	font-size: 14px;
-	font-family: $font-libre-gothic;
-	font-weight: 600;
-	color: #FFFFFF;
-}
+			&.even {
+				background: $color-hab-dark-gray;
+			}
 
-.quick-view .stats .stat {
-	display: table-row;
-}
+			.label {
+				display: table-cell;
+				padding: 1px 0 2px 10px;
+			}
 
-.quick-view .stats .stat.even {
-	background: #0B385B;
-}
+			.val {
+				display: table-cell;
+				width: 125px;
+				text-align: right;
+				padding: 0 10px;
+				vertical-align: middle;
+				white-space: normal;
+			}
 
-.quick-view .stats .stat .label {
-	display: table-cell;
-	padding: 1px 0px 2px 10px;
-}
-
-.quick-view .stats .stat .val {
-	display: table-cell;
-	/*width: 1%;*/
-	width: 125px;
-	text-align: right;
-	padding: 0 10px;
-	vertical-align: middle;
-	/*white-space: nowrap;*/
-	white-space: normal;
-}
-
-.quick-view .stat.subrow .label {
-	padding-left: 30px;
+			&.subrow {
+				.label {
+					padding-left: 30px;
+				}
+			}
+		}
+	}
 }
 
 /* PROFILE PERSON */
 .person .photo {
 	background-size: cover;
 	background-position: center top;
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 	background-image: url(/_resources/dyn/files/9035za2fed25b/_fn/default-user-photo.png);
 	background-repeat: no-repeat;
 }
@@ -609,10 +605,11 @@
 			padding-right: 13px;
 
 			.btn {
-				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height, $btn-border-radius-sm);
 
 				&.delete {
-					@include button-variant($color-app-red, $color-white, $color-app-red);
+					@include button-variant($color-app-red, $color-app-red);
+					color: $color-white;
 				}
 			}
 		}

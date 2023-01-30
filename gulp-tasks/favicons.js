@@ -5,11 +5,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var del = require('del');
 var favicons = require('gulp-favicons');
-var runSequence = require('run-sequence');
 
-gulp.task('favicons', function (callback) {
-    runSequence('favicons:clean', ['favicons:build'], callback);
-});
 gulp.task('favicons:build', function() {
     return gulp.src("./web/src/**/favicons/logo.png")
         .pipe(favicons({
@@ -37,3 +33,5 @@ gulp.task('favicons:clean', function(callback) {
         callback();
     });
 });
+
+gulp.task('favicons', gulp.series('favicons:clean', 'favicons:build'));
