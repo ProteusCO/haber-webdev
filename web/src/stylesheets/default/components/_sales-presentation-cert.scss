@@ -116,7 +116,7 @@
 	margin-left: 0;
 	float: right;
 	@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 }
 

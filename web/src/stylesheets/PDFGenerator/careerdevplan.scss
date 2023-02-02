@@ -1,23 +1,4 @@
-@font-face {
-  font-family: FranklinGothic URW Demi;
-  src: url('http://cultivate-growth.com/_resources/dyn/files/1083803z5d19a300/_fn/URW%2B%2B%20-%20FranklinGothicURW-Dem.otf');
-  -fs-pdf-font-embed: embed;
-  -fs-pdf-font-encoding: Identity-H;
-}
-
-@font-face {
-  font-family: FranklinGothic URW Cond Medium;
-  src: url('http://cultivate-growth.com/_resources/dyn/files/1083802z2a1e9396/_fn/URW%2B%2B%20-%20FranklinGothicURWCon-Med.otf');
-  -fs-pdf-font-embed: embed;
-  -fs-pdf-font-encoding: Identity-H;
-}
-
-@font-face {
-  font-family: FranklinGothic URW Book;
-  src: url('http://cultivate-growth.com/_resources/dyn/files/1083801zb317c22c/_fn/URW%2B%2B%20-%20FranklinGothicURW-Boo.otf');
-  -fs-pdf-font-embed: embed;
-  -fs-pdf-font-encoding: Identity-H;
-}
+@import url("https://use.typekit.net/gtw6mec.css");
 
 @page {
   size: 8.75in 11.25in; /* 8.5x11 + 0.125 bleed area on each edge */
@@ -30,7 +11,7 @@
 
 body {
   //font-family: Arial, sans-serif;
-  font-family: FranklinGothic URW Book, sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -48,7 +29,7 @@ body {
 h1 {
   font-size: 26px;
   margin-bottom: 26px;
-  font-family: FranklinGothic URW Demi, sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -56,7 +37,7 @@ h1 {
 h2 {
   font-size: 16px;
   margin: 10px 10px 10px 0;
-  font-family: FranklinGothic URW Demi, sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -123,7 +104,7 @@ h2 {
   display: table-cell;
   vertical-align: top;
   padding: 5px 10px;
-  font-family: FranklinGothic URW Book, sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -167,11 +148,11 @@ h2 {
 .prop-wrapper .prop-group .prop-group-title {
   width: 100%;
   display: block;
-  font-family: FranklinGothic URW Demi, sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-style: normal;
   font-weight: normal;
-  background: #052c49;
-  color: #FFFFFF;
+  background: #9ccb3b;
+  color: #2a2a2a;
   font-size: 16px;
   margin: 10px 0 0 0;
   padding: 5px 15px;
@@ -186,6 +167,6 @@ h2 {
 }
 
 .prop-wrapper .prop .val a {
-  color: #e5901a;
+  color: #f37520;
   text-decoration: none;
 }

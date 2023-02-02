@@ -552,7 +552,7 @@
 	margin: 0;
 	font-size: 12px;
 	padding: 3px 8px;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 }
 
@@ -639,7 +639,7 @@
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 	@include button-size($btn-padding-y, $btn-padding-x, $font-default-size, $btn-line-height, $btn-border-radius);
 	text-decoration: none;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	text-transform: uppercase;
 	font-weight: 700;
 

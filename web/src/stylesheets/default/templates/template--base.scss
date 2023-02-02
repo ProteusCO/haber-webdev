@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,600,700');
+@import url("https://use.typekit.net/gtw6mec.css");
 //@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
 @import "../config/base-import";
@@ -25,7 +25,7 @@
 
 body {
 	background: left top $body-bg url(/_resources/dyn/files/8818z58d6fab9/_fn/body-bg-tile.jpg) repeat;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-size: 14px;
 	font-weight: 400;
 	color: $font-default-color;
@@ -37,7 +37,7 @@ body {
 /* content box defaults */
 .content-box h1 {
 	color: $font-default-color;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 	font-size: 26px;
 	margin-top: 0;
@@ -45,7 +45,7 @@ body {
 
 .content-box h2 {
 	color: $font-default-color;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 	font-size: 22px;
 }
@@ -306,7 +306,7 @@ div.calendar {
 }
 
 .select2-container-multi .select2-choices .select2-search-field input {
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 }
 
 .select2-dropdown-open .select2-choice {

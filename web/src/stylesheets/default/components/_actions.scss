@@ -24,7 +24,7 @@
 	cursor: pointer;
 	@include button-variant($btn-primary-bg, $btn-primary-bg);
 	color: $color-white;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 	padding: .4rem 1rem;
 

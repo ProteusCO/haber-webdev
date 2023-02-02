@@ -543,7 +543,7 @@ button.btn {
 			.label, label {
 				width: 35%;
 				text-align: left;
-				font-family: $font-libre-gothic;
+				font-family: $font-default-family;
 				font-weight: 600;
 				max-width: 20rem;
 				padding: 10px 10px 10px 25px;
@@ -1115,7 +1115,7 @@ button.btn {
 	.add-activity .btn {
 		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 		font-weight: 700;
-		font-family: $font-open-sans;
+		font-family: $font-default-family;
 	}
 
 	.add-activity {
@@ -1379,7 +1379,7 @@ div.window.dialog.property_wrapper {
 			@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
 			font-size: .9rem;
 			font-weight: 600;
-			font-family: $font-libre-gothic;
+			font-family: $font-default-family;
 		}
 
 		.miwt-table a.btn.remove {

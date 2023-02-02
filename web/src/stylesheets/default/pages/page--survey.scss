@@ -19,7 +19,7 @@
 }
 
 .survey .question .label{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 }
 
@@ -80,7 +80,7 @@
 	background: $color-hab-orange;
 	border: 1px solid $color-white;
 	color: $color-white;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 	text-transform: uppercase;
 }

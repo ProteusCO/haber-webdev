@@ -30,7 +30,7 @@
 .resource-search-wrapper .search-field label{
 	display: block;
 	text-align: left;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 	margin-bottom: 5px;
 }
@@ -43,7 +43,7 @@ select.select2-dropdown{
 	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 	font-size: 1rem;
 	line-height: $btn-line-height;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 	padding: .55rem 1rem;
 	cursor: pointer;
@@ -73,7 +73,7 @@ select.select2-dropdown{
 	button.submit {
 		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 		font-weight: 700;
-		font-family: $font-libre-gothic;
+		font-family: $font-default-family;
 	}
 }
 
@@ -107,7 +107,7 @@ select.select2-dropdown{
 	color: $color-hab-orange;
 	text-decoration: none;
 	font-size: 20px;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 }
 
@@ -116,7 +116,7 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .info .label{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 	margin-right: 5px;
 }
@@ -129,7 +129,7 @@ select.select2-dropdown{
 
 .freemarker .resource-results .resource .info > .author,
 .freemarker .resource-results .resource .info > .resource-type{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 	font-size: 16px;
 	margin: 10px 0px;
@@ -149,7 +149,7 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .info > .file-type{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 	font-size: 16px;
 	margin: -2px 0 -5px 0;
@@ -178,7 +178,7 @@ select.select2-dropdown{
 
 .freemarker .resource-results .resource .pillars .pillars-header{
 	font-size: 18px;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 }
 

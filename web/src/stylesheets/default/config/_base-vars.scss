@@ -61,17 +61,13 @@ $menu-item-inactive: $color-app-light-grey;
 $header-bg: #A8ABBA;
 
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-libre-gothic: 'Libre Franklin', sans-serif;
+$font-family-serif: Times, 'Times New Roman', serif;
+
 $font-monospace: monospace;
-$font-arial: $font-family-sans-serif;
-$font-open-sans: $font-libre-gothic;
-//$font-open-sans: 'Open Sans', $font-arial;
-$font-open-sans-bold: 'Open Sans';
 $font-glyph-lib: "Font Awesome 5 Pro";
 $font-roboto: "Roboto", $font-family-sans-serif;
 
-$font-family-serif: Times, 'Times New Roman', serif;
-
+$font-default-family: "museo-sans", $font-family-sans-serif;
 $font-default-color: $color-hab-darkest-gray;
 $font-default-size: 14px;
 $font-default-content-line-height: 1.4;
