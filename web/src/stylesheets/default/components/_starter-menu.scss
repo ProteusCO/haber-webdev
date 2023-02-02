@@ -3,37 +3,69 @@
 /* Header styles */
 #header {
 	background: $color-hab-darkest-gray; /* Fallback for older browsers that don't support linear gradient */
-	background: linear-gradient(to bottom,  rgba($color-hab-darkest-gray, .8) 0%,rgba($color-hab-darkest-gray, .95) 36%,rgba($color-hab-darkest-gray,1) 100%); /* W3C */
+	background: linear-gradient(
+					to bottom,
+					rgba($color-hab-darkest-gray, .8) 0%,
+					rgba($color-hab-darkest-gray, .95) 36%,
+					rgba($color-hab-darkest-gray,1) 100%
+					);
 	border-bottom: 1px solid $color-hab-darkest-gray;
 
 	> .box-wc {
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		padding: 10px 0 10px 10px;
 
 		/* use flexbox to make sure the elements are displayed in the order we want them. */
-		> div {
-			order: 3;
+		.javascript,
+		.script {
+			order: 0;
+			display: none;
 		}
 
 		.logo {
 			order: 1;
+			flex: 0 0 50%;
 		}
 
 		.user-control {
 			order: 2;
+			flex: 0 0 50%;
 		}
 
-		.logo,
-		.user-control {
-			flex-basis: 50%;
+		.nav-menu {
+			flex: 0 0 100%;
+			order: 3;
+
+			@include breakpoint($bp-desktop) {
+				flex: 1 0 auto;
+			}
+		}
+
+		.miwt {
+			flex: 0 1 auto;
+			order: 4;
+
+			&:not(.send-cheer-con){
+				margin: 0 .5rem;
+			}
+		}
+
+		.send-cheer-con,
+		.notification-summary {
+			flex: 1 1 28px;
+			text-align: center;
+			order: 5;
 		}
 
 		.double-menu {
-			flex-basis: 100%;
 			text-align: center;
+
+			@include breakpoint($bp-desktop) {
+				text-align: left;
+			}
 		}
 
 		.custom-menu,
@@ -58,21 +90,8 @@
 			}
 		}
 
-		.send-cheer-con,
-		.notifications-summary {
-			flex-basis: 28px;
-			text-align: center;
-		}
-
 		.send-cheer-con .window.dialog {
 			text-align: initial;
-		}
-
-		@media only screen and (min-width: 1024px){
-			.double-menu{
-				flex-basis: calc(100% - 365px);
-				text-align: left;
-			}
 		}
 	}
 
@@ -103,7 +122,7 @@
 
 	.menuitemlabel {
 		display: block;
-		color: #fff;
+		color: $color-white;
 		text-decoration: none;
 		font-family: $font-default-family;
 		padding: 5px;
