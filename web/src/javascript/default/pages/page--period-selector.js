@@ -15,10 +15,6 @@ jQuery(function($) {
         if (results2 != null) {
             $dateRange = decodeURI(results2[1]);
         }
-        if ($positionId == '6788' && $dateRange == null) {
-            $('.control > select').val("ly");
-            $('.control > select').trigger('change');
-        }
     });
   
     $('.period-selector').each(function() {
