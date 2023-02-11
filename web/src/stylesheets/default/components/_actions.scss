@@ -14,7 +14,7 @@
 		}
 
 		&.remove, &.cancel, &.cancel-button, &.reschedule {
-			@include button-variant($color-app-red, $color-app-red);
+			@include button-variant($btn-tertiary-bg, $btn-tertiary-bg);
 			color: $color-white;
 		}
 	}

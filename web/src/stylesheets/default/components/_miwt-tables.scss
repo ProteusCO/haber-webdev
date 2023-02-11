@@ -12,7 +12,7 @@
 	margin: 1rem 0;
 	border-collapse: separate;
 	border-radius: 4px;
-	border-spacing: 0px;
+	border-spacing: 0;
 	border: 1px solid $color-hab-green;
 	border-top: 1px solid $color-hab-green;
 	border-bottom: none;
@@ -22,10 +22,10 @@
 		> th {
 			//@include style-table-heading;
 			background: $color-hab-green;
-			background: linear-gradient(to bottom,  $color-hab-green 0%, $color-hab-light-green 100%);
+			background: linear-gradient(to bottom, $color-hab-green 0%, $color-hab-light-green 100%);
 			font-size: 14px;
 			color: $color-hab-darkest-gray;
-			font-weight: 400;
+			font-weight: 600;
 			padding: 10px 15px;
 			text-align: left;
 			font-family: $font-default-family;
@@ -42,7 +42,7 @@
 
 			a {
 				color: $color-hab-darkest-gray;
-				text-decoration: underline;
+				@include anchorUnderlineHover;
 			}
 		}
 	}
