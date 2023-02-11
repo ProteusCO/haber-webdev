@@ -85,7 +85,7 @@
 
 .form_content .weekly-team-meeting button.save_exit_button {
 	@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 	padding: .4rem 1rem;
 }

@@ -71,7 +71,7 @@
 	display: inline-block;
 	vertical-align: top;
 	padding: 10px 10px 10px 25px;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 }
 
@@ -322,7 +322,7 @@
 
 .property-editor{
 	padding: 10px 0;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 	font-size: 14px;
 }
@@ -590,7 +590,7 @@
 
 /* TEMP UNTIL HTML RESTRUCTURE */
 .head-text{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 }
 
@@ -603,7 +603,7 @@ label.goals-checkbox{
 }
 
 .prop.prompt{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 	font-size: 16px;
 	display: inline-block;
@@ -618,7 +618,7 @@ label.goals-checkbox{
 }
 
 .standard-title, .custom-title{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 500;
 	font-size: 1.5rem;
 	margin: 10px 0;
@@ -633,7 +633,7 @@ label.goals-checkbox{
 }
 
 .company-name.title, .company-name.title h1{
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 700;
 	font-size: 22px;
 }
@@ -643,7 +643,7 @@ label.goals-checkbox{
 
 .property-viewer{
 	padding: 10px 0;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	font-weight: 600;
 	font-size: 14px;
 }

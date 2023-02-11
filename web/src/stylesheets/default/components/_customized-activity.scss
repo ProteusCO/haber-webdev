@@ -5,12 +5,12 @@
 }
 
 .customized .form_field span.label {
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 }
 
 /* Style JSC Custom for OSI Form Question */
 .or-performance-custom .extra_value_renderer  {
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	width: 100%;
 	font-size: 14px;
 	padding: 10px;
@@ -79,7 +79,7 @@
 
 .precall_checklist .form_field span.label {
 	margin-right: 10px;
-	font-family: $font-libre-gothic;
+	font-family: $font-default-family;
 	display: block;
 }
 

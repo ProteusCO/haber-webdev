@@ -101,7 +101,7 @@ body {
       display: inline-block;
       vertical-align: middle;
       color: $color-hab-darkest-gray;
-      font-family: "Libre Franklin",sans-serif;
+      font-family: $font-default-family;
       font-weight: 700;
       font-size: 26px;
       background: rgba($color-white,0.15);

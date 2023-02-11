@@ -17,7 +17,7 @@
 	input[type="color"] {
 		height: 30px;
 		line-height: 26px;
-		font-family: $font-libre-gothic;
+		font-family: $font-default-family;
 		font-size: 14px;
 		border: 1px solid #C2C2C2;
 		border-radius: 3px;
@@ -40,7 +40,7 @@
 
 	textarea {
 		padding: 5px;
-		font-family: $font-libre-gothic;
+		font-family: $font-default-family;
 		font-size: 14px;
 		border: 1px solid #C2C2C2;
 		border-radius: 3px;
