@@ -286,7 +286,7 @@
 	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
 	box-shadow: 0 0 6px rgba(0,0,0,0.1);
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 }
 
 .full-view .table-partition.data {
@@ -352,7 +352,7 @@
 
 /* table part generic */
 .table-part th {
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 	color: #fff;
 	font-weight: normal;
 	font-size: 16px;
@@ -483,7 +483,7 @@
 	left: 0;
 	bottom: 0;
 	z-index: 1;
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 	background-color: rgba(0,0,0,0.5);
 }
 
@@ -509,7 +509,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 	background-color: rgba(0,0,0,0.6);
 }
 
@@ -550,7 +550,7 @@
 	vertical-align: top;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 	background-color: rgba(0,0,0,0.2);
 	border-radius: 3px;
 	margin: 0 2px;
@@ -604,12 +604,12 @@ tr.joint-sales-calls .select2-container {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 	height: 140px;
 
 }
 .table-partition.data .picture-frame .pf {
-	background-color: #333639;
+	background-color: $color-hab-darkest-gray;
 	position: absolute;
 	z-index: 20;
 }

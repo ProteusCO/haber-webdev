@@ -19,7 +19,7 @@ $color-app-yellow: #fdb813;
 $color-app-blue: #488fb4;
 $color-app-light-blue: #4AB0D5;
 $color-app-cyan: #6CCAC9;
-$color-app-red: #EE695B;
+$color-app-red: #F32020;
 $color-app-black: #343940;
 $color-app-grey: #515B6B;
 $color-app-light-grey: #9699A6;
@@ -51,6 +51,10 @@ $btn-line-height:                0.75;
 $btn-secondary-color:            $color-white;
 $btn-secondary-bg:               $color-hab-light-gray;
 $btn-secondary-border:           $color-hab-dark-gray;
+
+$btn-tertiary-color:            $color-white;
+$btn-tertiary-bg:               $color-hab-dark-gray;
+$btn-tertiary-border:           $color-hab-darkest-gray;
 
 $btn-box-shadow:                 none;
 $btn-focus-width:                2px;
