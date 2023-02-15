@@ -516,7 +516,13 @@
 }
 
 .profile .person .details {
-	background-color: $color-hab-darkest-gray;
+	background: $color-hab-darkest-gray; /* Fallback for older browsers that don't support linear gradient */
+	background: linear-gradient(
+				to bottom,
+				rgba($color-hab-darkest-gray, .8) 0%,
+				rgba($color-hab-darkest-gray, .95) 36%,
+				rgba($color-hab-darkest-gray,1) 100%
+	);
 }
 
 .profile .person .details {
