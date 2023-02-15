@@ -39,42 +39,25 @@ select.select2-dropdown{
 	min-width: 200px;
 }
 
-.resource-search-container .coaching-search-reset .reset-span{
-	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
-	font-size: 1rem;
-	line-height: $btn-line-height;
-	font-family: $font-default-family;
-	font-weight: 700;
-	padding: .55rem 1rem;
-	cursor: pointer;
-	box-shadow: none;
-	text-shadow: none;
-	display: inline-block;
-	border-radius: $btn-border-radius;
-}
-
-.resource-search-container .coaching-search-reset .reset-span:hover{
-	background-color: #919191;
-	border-color: #4D4D4D;
-}
-
 .resource-search-container .coaching-search-reset{
 	display: inline-block;
 	vertical-align: top;
 	text-decoration: none;
-	height: 30px;
+	height: 26px;
+
+	@include button-variant($btn-secondary-bg, $btn-secondary-bg);
+	color: $color-white;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: .75;
+	border-radius: 0.25rem;
+	padding: 0.4rem 1rem;
 }
 
 .resource-search-wrapper > .action{
 	display: inline-block;
 	vertical-align: bottom;
 	margin: 10px 5px 10px 20px;
-
-	button.submit {
-		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-		font-weight: 700;
-		font-family: $font-default-family;
-	}
 }
 
 
@@ -108,7 +91,7 @@ select.select2-dropdown{
 	text-decoration: none;
 	font-size: 20px;
 	font-family: $font-default-family;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .freemarker .resource-results .resource .name > a:hover{
