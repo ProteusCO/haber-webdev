@@ -68,20 +68,14 @@
 
 				a, button {
 					@include button-variant($btn-primary-bg, $btn-primary-bg, $btn-primary-border);
-					@include button-size($btn-padding-y-sm, $btn-padding-x-sm, 13px, $btn-line-height, $btn-border-radius-sm);
+					@include button-size($btn-padding-x-sm, $btn-padding-x-sm, 13px, 1, $btn-border-radius-sm);
 					color: $color-white;
-					font-size: 13px;
 					margin: 0 5px 5px 0;
 					text-transform: uppercase;
 					font-weight: 600;
 					display: inline-block;
 					vertical-align: middle;
 					text-align: center;
-
-					&.btn {
-						line-height: 1;
-						padding: .35rem .5rem;
-					}
 
 					&:hover {
 						text-decoration: none;
