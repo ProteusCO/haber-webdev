@@ -567,6 +567,10 @@ div.window.dialog {
 		text-decoration: underline;
 		font-size: 14px;
 
+		//reset button styles - not sure why this has a .btn classname when we don't want it to look like one
+		background-color: transparent;
+		border: none;
+
 		&:hover {
 			text-decoration: none;
 		}
