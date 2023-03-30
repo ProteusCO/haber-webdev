@@ -14,7 +14,9 @@
 	display: block;
 	float: right;
 	margin-right: 10px;
-	@include button-variant($color-app-red, $color-white, $color-app-red);
+
+	color: $color-hab-orange !important;
+	background-color: transparent !important;
 }
 
 .prop-wrapper.prop-gen .prop .ctb label {
@@ -226,7 +228,8 @@ input.file-upload-browse {
 	position: relative;
 
 	.btn.remove {
-		@include button-variant($color-app-red, $color-white, $color-app-red);
+		color: $color-hab-orange !important;
+		background-color: transparent !important;
 	}
 }
 
