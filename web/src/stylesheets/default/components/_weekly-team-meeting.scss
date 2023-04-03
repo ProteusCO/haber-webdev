@@ -68,11 +68,34 @@
 }
 
 .form_content .weekly-team-meeting .question .form_field input,
-.form_content .weekly-team-meeting .question .form_field textarea,
-.form_content .weekly-team-meeting .question .form_field .file_extra_upload_form {
+.form_content .weekly-team-meeting .question .form_field textarea {
 	display: inline-block;
 	width: 45%;
 	vertical-align: top;
+}
+
+/* extra styles to account for the "remove file" input on the file upload */
+.form_content .weekly-team-meeting .question .form_field .file_extra_upload_form {
+	width: 45%;
+	display: inline-flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+
+	.ctb  {
+		display: inline-flex;
+		align-items: center;
+
+		label,
+		input {
+			width: auto;
+		}
+
+		label {
+			margin: 0;
+		}
+
+	}
 }
 
 /*.form_content .weekly-team-meeting .question .form_field.text_field textarea {
