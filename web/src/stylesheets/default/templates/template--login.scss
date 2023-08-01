@@ -1,0 +1,124 @@
+@import "../config/base-import";
+
+#header {
+  display: none;
+}
+
+#e-content {
+  .box-wc {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(https://haber-release-admin.s3.amazonaws.com/d643-5912811-Cultivate_login_gradientonly_02.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content-box {
+      flex: 1 1 calc(100vw - 2rem);
+      padding: 2rem;
+      margin: 2rem 1rem;
+      max-width: 420px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: $color-white;
+
+      .logo {
+        img {
+          max-width: 120px;
+          height: auto;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .login-heading {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        color: $hab-primary;
+      }
+    }
+
+
+    @include breakpoint($bp-tablets-landscape) {
+      justify-content: flex-start;
+
+      &:after {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 33%;
+        bottom: 0;
+        right: 0;
+        background-image: url(https://haber-release-admin.s3.amazonaws.com/5fc5-6912811-Cultivate_login_thirds_02.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .content-box {
+        flex: 0 0 33%;
+        max-width: unset;
+        margin: 0;
+
+        .logo {
+          img {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($bp-desktop) {
+      .content-box {
+        padding: 4rem;
+      }
+    }
+  }
+}
+
+// styles for the login form and other page content
+
+#login {
+  position: relative;
+
+  .title {
+    display: none;
+  }
+
+  label, .label {
+    font-weight: 600;
+    letter-spacing: .0125rem;
+  }
+
+  input[type=text],
+  input[type=password],
+  input[type=submit],
+  button.submit {
+    display: block;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    line-height: 2;
+    height: auto;
+    width: 100%;
+    min-width: calc(33vw - 8rem);
+    max-width: 100%;
+  }
+
+  &:not(.create-password, .retrieve-password){
+    .actions {
+      margin-top: 4.5rem;
+    }
+
+    .retrieve-password {
+      position: absolute;
+      bottom: 3rem;
+      left: 0;
+    }
+  }
+}
