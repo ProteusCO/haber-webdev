@@ -807,10 +807,11 @@ border-top-color: #1f88d8;
 	display: none;
 }
 
-.notification-summary.has-notifications {
-	cursor: pointer;
-	display: block;
-}
+// Do not show notification hider: HAB-1286
+//.notification-summary.has-notifications {
+//	cursor: pointer;
+//	display: block;
+//}
 
 .notification-summary .notification-count {
 	color: $color-white;
