@@ -74,10 +74,6 @@
   .topic-list {
     max-width: calc(100% / 5 - 1rem);
   }
-  #t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
-    width: 980px;
-    margin: 0 auto;
-  }
 
   .primary-menu + .primary-menu{
     margin-left: 30px;
@@ -91,10 +87,6 @@
 @media all and (min-width: 760px) and (max-width: 1023px) {
   .topic-list {
     max-width: calc(100% / 4 - 1rem)
-  }
-  #t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
-    width: 730px;
-    margin: 0 auto;
   }
 
   .primary-menu + .primary-menu{
@@ -113,10 +105,6 @@
 }
 
 @media all and (max-width: 759px) {
-  #t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
-    width: 580px;
-    margin: 0 auto;
-  }
 
   .primary-menu + .primary-menu{
     margin-left: 5px;
