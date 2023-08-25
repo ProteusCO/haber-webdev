@@ -1,7 +1,6 @@
 #t-interior-full .content-box{
-	width: 1240px;
 	min-height: 570px;
-	margin: auto;
+	margin: 1rem;
 	padding: 1.5rem;
 }
 
@@ -61,16 +60,8 @@
 	padding: 0;
 }*/
 
-@media all and (min-width: 1024px) and (max-width: 1279px){
-	#t-interior-full .content-box{
-		width: 980px;
-	}
-}
 
 @media all and (min-width: 768px) and (max-width: 1023px){
-	#t-interior-full .content-box{
-		width: 720px;
-	}
 
 	.user-picture-editor {
 		width: 40%;
@@ -83,9 +74,6 @@
 }
 
 @media all and (max-width: 767px){
-	#t-interior-full .content-box{
-		width: 550px;
-	}
 
 	.user-picture-editor{
 		width: 100%;

@@ -5,9 +5,6 @@
 /******************************************/
 
 @media all and (min-width: 1024px) and (max-width: 1279px) {
-	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0 {
-		width: 980px;
-	}
 	.primary-menu + .primary-menu {
 		margin-left: 30px;
 	}
@@ -17,9 +14,6 @@
 	}
 }
 @media all and (min-width: 760px) and (max-width: 1023px) {
-	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
-		width: 728px;
-	}
 	.primary-menu + .primary-menu{
 		margin-left: 10px;
 	}
@@ -34,9 +28,7 @@
 }
 
 @media all and (min-width: 480px) and (max-width: 759px) {
-	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
-		width: 580px;
-	}
+
 	.primary-menu + .primary-menu{
 		margin-left: 5px;
 	}
@@ -54,10 +46,6 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
 	h1{
 		text-align: center;
-	}
-
-	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
-		width: 320px;
 	}
 
 	.primary-menu{
@@ -86,9 +74,6 @@
 		text-align: center;
 	}
 
-	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
-		width: 478px;
-	}
 	.primary-menu + .primary-menu{
 		margin-left: 2px;
 	}

@@ -52,11 +52,8 @@ body {
 
 /* Interior Template styles */
 #t-interior {
-	#header-wc-0,
-	#primary-breadcrumbs-wc-0,
 	#e-content-wc-0 {
-		width: 1240px;
-		margin: 0 auto;
+		margin: 1rem;
 	}
 }
 
@@ -68,7 +65,7 @@ body {
 		margin-left: 10px;
 	}
 	.content-box {
-		width: 960px;
+		width: calc(100% - 285px);
 		margin-left: 280px;
 	}
 }
